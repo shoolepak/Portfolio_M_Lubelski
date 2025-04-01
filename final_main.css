@@ -489,7 +489,7 @@ h2 {
 		color: white;
 		float: left;
 		padding: 15px 15px;
-		font-size: 20px;
+		font-size: 30px;
 		
 	} 
 	.upbar #ML{
@@ -506,49 +506,28 @@ h2 {
     }
 	.container2 {
 	max-width: 500px;
-	margin: 20px;
-	margin-right: auto;
-	padding: 0 0px;
-	float: left;
 }
 .container3 {
 	max-width: 900px;
-	margin: 20px;
-	margin-right: auto;
-	padding: 0 0px;
-	float: left;
 }
 .container4 {
 	max-width: 400px;
-	margin: 20px;
-	margin-right: auto;
-	padding: 0 0px;
-	float: left;
 }
 .container4_4 {
 	max-width: 600px;
-	margin: 0px;
-	margin-right: auto;
-	padding: 0 0px;
-	float: left;
-	padding-right: 20px;
 }
 .container5 {
-	max-width: 1700px;
-	margin: 0px;
-	margin-right: auto;
-	padding: 0 0px;
-	float: left;
+	max-width: 1500px;
 }
 #navbar2 li {
-	padding: 10px 0;
+	padding: 8px 0;
 	border-bottom: 8px solid #555;
 }
 #navbar2 a {
 	color: white;
 	text-decoration: none;
 	font-family: "Bebas Neue", sans-serif;
-	font-size: 20px;
+	font-size: 17px;
 	padding: 8px 0px;
 }
 #navbar2 a:hover {
@@ -558,7 +537,7 @@ h2 {
 	transition: background-color 0.3s;
 }  
 #navbar2 h1 {
-	margin-top: 35px;
+	margin-top: 20px;
 }
 #navbar2 .nav-button.active {
 	background-color: #f1f1f1;
