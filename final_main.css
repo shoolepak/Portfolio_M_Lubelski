@@ -484,7 +484,7 @@ h2 {
             opacity: 1;
             text-align: center;
         }
-@media screen and (max-width: 1650px) {
+@media screen and (max-width: 1750px) {
     .upbar h1{
 		color: white;
 		float: left;
@@ -520,7 +520,7 @@ h2 {
 	max-width: 1200px;
 }
 #navbar2 li {
-	padding: 8px 0;
+	padding: 6px 0;
 	border-bottom: 8px solid #555;
 }
 #navbar2 a {
