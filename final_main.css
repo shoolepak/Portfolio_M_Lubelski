@@ -332,9 +332,9 @@ h2 {
             rotate: -3deg;
         }
 		#img9 {
-            grid-column: 1 / span 2;
-            grid-row: 1 / span 3;
-            rotate: -3deg;
+            grid-column: 1 / span 5;
+            grid-row: 1 / span 10;
+            rotate: -1deg;
         }
 		.video-grid {
             display: grid;

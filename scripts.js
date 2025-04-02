@@ -10,7 +10,7 @@ function flashNavbarColor() {
   }
 
 // Script 2: Navigate
-window.addEventListener('scroll', function() {
+	window.addEventListener('scroll', function() {
             const navbar = document.getElementById('navbar2');
             // Show navbar when scrolled 200px or more
             if (window.pageYOffset > 230) {
@@ -21,7 +21,7 @@ window.addEventListener('scroll', function() {
         });
 
 // Script 3: Navselect
-document.addEventListener('DOMContentLoaded', function() {
+	document.addEventListener('DOMContentLoaded', function() {
             const sections = document.querySelectorAll('section');
             const navButtons = document.querySelectorAll('.nav-button');
 
@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 
 // Script 3: Fullscreenphotos
-document.addEventListener('DOMContentLoaded', function() {
+	document.addEventListener('DOMContentLoaded', function() {
             const gridItems = document.querySelectorAll('.grid-item');
             const overlay = document.querySelector('.fullscreen-overlay');
             const fullscreenImage = document.querySelector('.fullscreen-image');
