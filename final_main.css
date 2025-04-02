@@ -331,6 +331,11 @@ h2 {
             grid-row: 5 / span 3;
             rotate: -3deg;
         }
+		#img9 {
+            grid-column: 1 / span 2;
+            grid-row: 1 / span 3;
+            rotate: -3deg;
+        }
 		.video-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));

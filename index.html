@@ -27,7 +27,7 @@
     <td><div class="navbar">
   <a class="active" href="#home">Home</a>
   <a href="#portfolio">Portfolio</a>
-  <a href="about.html">About</a>
+  <a href="#about">About</a>
   <a href="#contact" onclick="setTimeout(flashNavbarColor, 600)">Contact</a>
   
   
@@ -77,16 +77,15 @@
 <div class="gallery">
         
 		<a href="#animation" id="img1"><img src="media/img/joule.gif" alt="anim" ></a>
-        	<a href="#coding" id="img4"><img src="media/img/voxel.gif" alt="coding"></a>
-        	<a href="#sketches" id="img3"><img src="media/img/harold.gif" alt="sketch"></a>
+        <a href="#coding" id="img4"><img src="media/img/voxel.gif" alt="coding"></a>
+        <a href="#sketches" id="img3"><img src="media/img/harold.gif" alt="sketch"></a>
 		<a href="#3dart" id="img2"><img src="media/img/3D.gif" alt="3d"></a>
-        	<a href="#logos" id="img5"><img src="media/img/pierog.gif" alt="logo"></a>
+        <a href="#logos" id="img5"><img src="media/img/pierog.gif" alt="logo"></a>
 		<a href="#textures" id="img6"><img src="media/img/texture.gif" alt="texture"></a>
 		<a href="#writing" id="img7"><img src="media/img/text.gif" alt="text"></a>
 		<a href="#editing" id="img8"><img src="media/img/vfx.gif" alt="vfx"></a>
     </div>
 	</section>
-<br>
 <section id="animation">
 <header>
     <h1 id="h1">Animation</h1>
@@ -626,9 +625,43 @@
                     <iframe src="https://www.youtube.com/embed/Esa3D0iB0rk?si=Q9pLOnK9Y9NzhgXF" allowfullscreen></iframe>
                 </div>
             </div>
-        </div></div></div>
-    
+        </div></div></div>    
 </section>
+<section id="about"><header>
+    <h1 id="h1">About</h1>
+    <!--<p>something something maybe</p>-->
+</header>
+
+<div class="container2">
+     <div class="section">
+        <h2>Hello!</h2>
+        <p>Everything you see on this page <strong>(except for the fonts—that's a task for the future)</strong> was meticulously crafted by me.</p>
+
+    <p>No, seriously, <strong>everything</strong>—the images, GIFs, videos, the cool eclipse background, the page layout, and even the code holding it all up. Every pixel, every animation, every interaction—it's all carefully designed to showcase what I can do.</p>
+
+    <p><i><strong>But why?</strong></i></p>
+
+    <p>Since this is a portfolio meant to showcase my skills, I wanted to go beyond just displaying my work—I wanted the portfolio itself to be <strong>part of the experience</strong>. Over the years, I've picked up quite a few different skills, from <strong>animation and game development to programming and design</strong>, and I felt this was the best way to tie them all together. A static, templated portfolio wouldn't really do justice to the variety of things I create.</p>
+
+    <p>The truth is, <strong>the works here aren’t even my best</strong>—at least not yet. Many of them will be replaced with newer, better projects that are still in progress. But in the meantime, the website itself serves as a portfolio piece—a testament to my coding skills and my approach to interactive design.</p>
+
+    <p>So go ahead, <strong>click all the buttons, test all the features, and explore freely</strong>. If you want to learn more about me, check out the <strong>About</strong> section!</p>
+
+    <p>Oh, and remember—this page is still <strong>🚧 under construction 🚧</strong>, so expect things to change and evolve over time!</p><br>
+	</div>
+</div>
+<div class="gallery">
+        
+		<a href="#animation" id="img1"><img src="media/img/joule.gif" alt="anim" ></a>
+        <a href="#coding" id="img4"><img src="media/img/voxel.gif" alt="coding"></a>
+        <a href="#sketches" id="img3"><img src="media/img/harold.gif" alt="sketch"></a>
+		<a href="#3dart" id="img2"><img src="media/img/3D.gif" alt="3d"></a>
+        <a href="#logos" id="img5"><img src="media/img/pierog.gif" alt="logo"></a>
+		<a href="#textures" id="img6"><img src="media/img/texture.gif" alt="texture"></a>
+		<a href="#writing" id="img7"><img src="media/img/text.gif" alt="text"></a>
+		<a href="#editing" id="img8"><img src="media/img/vfx.gif" alt="vfx"></a>
+    </div>
+	</section>
 <div class="contact" id="contactnav">
 <table><footer id="footer">
     <p>&copy; 2025 Marek Lubelski. All rights reserved (or so I'd hope).</p>
@@ -649,136 +682,6 @@
 </div>
 </div>
 <a name="contact"></a>
-<script>
-function flashNavbarColor() {
-    var navbar = document.getElementById("contactnav");
-    navbar.style.backgroundColor = "#3498db"; // Change color to blue
-    setTimeout(function() {
-      navbar.style.backgroundColor = "#333"; // Revert color back to default after 500 milliseconds
-    }, 800);
-  }
-</script>
-<script>
- window.addEventListener('scroll', function() {
-            const navbar = document.getElementById('navbar2');
-            // Show navbar when scrolled 200px or more
-            if (window.pageYOffset > 230) {
-                navbar.style.right = '0';
-            } else {
-                navbar.style.right = '-300px';
-            }
-        });
-</script>
-<script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const sections = document.querySelectorAll('section');
-            const navButtons = document.querySelectorAll('.nav-button');
-
-            // Function to check which section is in view
-            function makeActive() {
-                let current = '';
-                
-                sections.forEach(section => {
-                    const sectionTop = section.offsetTop;
-                    const sectionHeight = section.clientHeight;
-                    
-                    if (pageYOffset >= (sectionTop - sectionHeight / 3)) {
-                        current = section.getAttribute('id');
-                    }
-                });
-
-                navButtons.forEach(button => {
-                    button.classList.remove('active');
-                    if (button.getAttribute('href') === `#${current}`) {
-                        button.classList.add('active');
-                    }
-                });
-            }
-
-            // Run on scroll and on initial load
-            window.addEventListener('scroll', makeActive);
-            makeActive();
-        });
-    </script>
-	<script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const gridItems = document.querySelectorAll('.grid-item');
-            const overlay = document.querySelector('.fullscreen-overlay');
-            const fullscreenImage = document.querySelector('.fullscreen-image');
-            const closeBtn = document.querySelector('.close-btn');
-            const prevBtn = document.querySelector('.prev-btn');
-            const nextBtn = document.querySelector('.next-btn');
-            const fullscreenTitle = document.querySelector('.fullscreen-title');
-            const fullscreenAuthor = document.querySelector('.fullscreen-author');
-            
-            let currentIndex = 0;
-            
-            // Open fullscreen overlay
-            gridItems.forEach((item, index) => {
-                item.addEventListener('click', () => {
-                    currentIndex = index;
-                    updateFullscreenImage();
-                    overlay.classList.add('active');
-                    document.body.style.overflow = 'hidden';
-                });
-            });
-            
-            // Close fullscreen overlay
-            closeBtn.addEventListener('click', () => {
-                overlay.classList.remove('active');
-                document.body.style.overflow = 'auto';
-            });
-            
-            // Navigate between images
-            prevBtn.addEventListener('click', (e) => {
-                e.stopPropagation();
-                currentIndex = (currentIndex - 1 + gridItems.length) % gridItems.length;
-                updateFullscreenImage();
-            });
-            
-            nextBtn.addEventListener('click', (e) => {
-                e.stopPropagation();
-                currentIndex = (currentIndex + 1) % gridItems.length;
-                updateFullscreenImage();
-            });
-            
-            // Keyboard navigation
-            document.addEventListener('keydown', (e) => {
-                if (!overlay.classList.contains('active')) return;
-                
-                if (e.key === 'Escape') {
-                    overlay.classList.remove('active');
-                    document.body.style.overflow = 'auto';
-                } else if (e.key === 'ArrowLeft') {
-                    currentIndex = (currentIndex - 1 + gridItems.length) % gridItems.length;
-                    updateFullscreenImage();
-                } else if (e.key === 'ArrowRight') {
-                    currentIndex = (currentIndex + 1) % gridItems.length;
-                    updateFullscreenImage();
-                }
-            });
-            
-            // Update fullscreen image and info
-            function updateFullscreenImage() {
-                const activeItem = gridItems[currentIndex];
-                const imgSrc = activeItem.querySelector('img').src;
-                const title = activeItem.querySelector('h3').textContent;
-                const author = activeItem.querySelector('p').textContent;
-                
-                fullscreenImage.src = imgSrc;
-                fullscreenImage.alt = activeItem.querySelector('img').alt;
-                fullscreenTitle.textContent = title;
-                fullscreenAuthor.textContent = author;
-            }
-            
-            // Close when clicking outside image
-            overlay.addEventListener('click', (e) => {
-                if (e.target === overlay) {
-                    overlay.classList.remove('active');
-                    document.body.style.overflow = 'auto';
-                }
-            });
-        });
-    </script>
+<script src="scripts.js"></script>
 </body>
 </html>
