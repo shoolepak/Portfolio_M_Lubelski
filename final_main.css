@@ -547,26 +547,31 @@ h2 {
             text-align: center;
         }
 @media screen and (max-width: 1750px) {
-    .upbar h1{
-		color: white;
-		float: left;
-		padding: 15px 15px;
-		font-size: 30px;
-		
-	} 
-	.upbar #ML{
-		max-width: 75%;
-		min-width: 60%;
-		margin-left: 20px;
-		padding: 10px 5px;
-	}
-	.navbar a {
-		float: left;
-		display: block;
-		text-align: left;
-		padding: 14px 10px;
-    }
-	.container2 {
+#myVideo {
+	left: -200px;
+	right: 0;
+	top: -200px;
+	bottom: 0;
+}
+.upbar h1{
+	color: white;
+	float: left;
+	padding: 15px 15px;
+	font-size: 30px;
+} 
+.upbar #ML{
+	max-width: 75%;
+	min-width: 60%;
+	margin-left: 20px;
+	padding: 10px 5px;
+}
+.navbar a {
+	float: left;
+	display: block;
+	text-align: left;
+	padding: 14px 10px;
+}
+.container2 {
 	max-width: 480px;
 }
 .container3 {
@@ -614,6 +619,10 @@ h2 {
             flex: 1;
             min-height: 35px;
         }
+  }
+.fade-in {
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
   }
 #footer {
 	background-color: #333;

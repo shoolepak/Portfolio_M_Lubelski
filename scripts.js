@@ -160,3 +160,27 @@ function flashNavbarColor() {
                 });
             });
         });
+		
+// Script 5: Fade in video //
+
+document.addEventListener("DOMContentLoaded", function() {
+    const mediaElements = document.querySelectorAll('img, video');
+    
+    mediaElements.forEach(element => {
+      if (element.complete || element.readyState > 3) {
+        // Already loaded
+        element.style.opacity = 1;
+      } else {
+        element.addEventListener('load', () => {
+          element.style.opacity = 1;
+        });
+        element.addEventListener('loadeddata', () => {
+          element.style.opacity = 1;
+        });
+        element.addEventListener('error', () => {
+          // Handle broken images
+          element.style.opacity = 1;
+        });
+      }
+    });
+  });
