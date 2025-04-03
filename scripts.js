@@ -51,7 +51,7 @@ function flashNavbarColor() {
             makeActive();
         });
 
-// Script 3: Fullscreenphotos
+// Script 3: Fullscreen photos
 	document.addEventListener('DOMContentLoaded', function() {
             const gridItems = document.querySelectorAll('.grid-item');
             const overlay = document.querySelector('.fullscreen-overlay');
@@ -128,5 +128,30 @@ function flashNavbarColor() {
                     overlay.classList.remove('active');
                     document.body.style.overflow = 'auto';
                 }
+            });
+        });
+
+// Script 4: Custom playbutton //
+
+	document.addEventListener('DOMContentLoaded', function() {
+            const videoContainers = document.querySelectorAll('.video-container');
+            
+            videoContainers.forEach(container => {
+                container.addEventListener('click', function() {
+                    const videoId = this.getAttribute('data-video-id');
+                    const title = this.getAttribute('data-title');
+                    
+                    this.innerHTML = `
+                        <iframe 
+                            width="560" 
+                            height="315" 
+                            src="https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen
+                            title="${title}"
+                        ></iframe>
+                    `;
+                });
             });
         });
