@@ -53,83 +53,88 @@ function flashNavbarColor() {
 
 // Script 3: Fullscreen photos
 	document.addEventListener('DOMContentLoaded', function() {
-            const gridItems = document.querySelectorAll('.grid-item');
-            const overlay = document.querySelector('.fullscreen-overlay');
-            const fullscreenImage = document.querySelector('.fullscreen-image');
-            const closeBtn = document.querySelector('.close-btn');
-            const prevBtn = document.querySelector('.prev-btn');
-            const nextBtn = document.querySelector('.next-btn');
-            const fullscreenTitle = document.querySelector('.fullscreen-title');
-            const fullscreenAuthor = document.querySelector('.fullscreen-author');
-            
-            let currentIndex = 0;
-            
-            // Open fullscreen overlay
-            gridItems.forEach((item, index) => {
-                item.addEventListener('click', () => {
-                    currentIndex = index;
-                    updateFullscreenImage();
-                    overlay.classList.add('active');
-                    document.body.style.overflow = 'hidden';
-                });
-            });
-            
-            // Close fullscreen overlay
-            closeBtn.addEventListener('click', () => {
-                overlay.classList.remove('active');
-                document.body.style.overflow = 'auto';
-            });
-            
-            // Navigate between images
-            prevBtn.addEventListener('click', (e) => {
-                e.stopPropagation();
-                currentIndex = (currentIndex - 1 + gridItems.length) % gridItems.length;
+    // Select all grid containers (sections)
+    const gridContainers = document.querySelectorAll('.grid-container');
+    
+    gridContainers.forEach(container => {
+        const gridItems = container.querySelectorAll('.grid-item');
+        const overlay = document.querySelector('.fullscreen-overlay');
+        const fullscreenImage = document.querySelector('.fullscreen-image');
+        const closeBtn = document.querySelector('.close-btn');
+        const prevBtn = document.querySelector('.prev-btn');
+        const nextBtn = document.querySelector('.next-btn');
+        const fullscreenTitle = document.querySelector('.fullscreen-title');
+        const fullscreenAuthor = document.querySelector('.fullscreen-author');
+        
+        let currentIndex = 0;
+        let currentGridItems = []; // This will store items from the current section only
+        
+        // Open fullscreen overlay
+        gridItems.forEach((item, index) => {
+            item.addEventListener('click', () => {
+                currentGridItems = Array.from(gridItems); // Store items from this section only
+                currentIndex = index;
                 updateFullscreenImage();
-            });
-            
-            nextBtn.addEventListener('click', (e) => {
-                e.stopPropagation();
-                currentIndex = (currentIndex + 1) % gridItems.length;
-                updateFullscreenImage();
-            });
-            
-            // Keyboard navigation
-            document.addEventListener('keydown', (e) => {
-                if (!overlay.classList.contains('active')) return;
-                
-                if (e.key === 'Escape') {
-                    overlay.classList.remove('active');
-                    document.body.style.overflow = 'auto';
-                } else if (e.key === 'ArrowLeft') {
-                    currentIndex = (currentIndex - 1 + gridItems.length) % gridItems.length;
-                    updateFullscreenImage();
-                } else if (e.key === 'ArrowRight') {
-                    currentIndex = (currentIndex + 1) % gridItems.length;
-                    updateFullscreenImage();
-                }
-            });
-            
-            // Update fullscreen image and info
-            function updateFullscreenImage() {
-                const activeItem = gridItems[currentIndex];
-                const imgSrc = activeItem.querySelector('img').src;
-                const title = activeItem.querySelector('h3').textContent;
-                const author = activeItem.querySelector('p').textContent;
-                
-                fullscreenImage.src = imgSrc;
-                fullscreenImage.alt = activeItem.querySelector('img').alt;
-                fullscreenTitle.textContent = title;
-                fullscreenAuthor.textContent = author;
-            }
-            
-            // Close when clicking outside image
-            overlay.addEventListener('click', (e) => {
-                if (e.target === overlay) {
-                    overlay.classList.remove('active');
-                    document.body.style.overflow = 'auto';
-                }
+                overlay.classList.add('active');
+                document.body.style.overflow = 'hidden';
             });
         });
+        
+        // Close fullscreen overlay
+        closeBtn.addEventListener('click', () => {
+            overlay.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        });
+        
+        // Navigate between images
+        prevBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            currentIndex = (currentIndex - 1 + currentGridItems.length) % currentGridItems.length;
+            updateFullscreenImage();
+        });
+        
+        nextBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            currentIndex = (currentIndex + 1) % currentGridItems.length;
+            updateFullscreenImage();
+        });
+        
+        // Update fullscreen image and info
+        function updateFullscreenImage() {
+            const activeItem = currentGridItems[currentIndex];
+            const imgSrc = activeItem.querySelector('img').src;
+            const title = activeItem.querySelector('h3').textContent;
+            const author = activeItem.querySelector('p').textContent;
+            
+            fullscreenImage.src = imgSrc;
+            fullscreenImage.alt = activeItem.querySelector('img').alt;
+            fullscreenTitle.textContent = title;
+            fullscreenAuthor.textContent = author;
+        }
+    });
+    
+    // These event listeners can remain global
+    const overlay = document.querySelector('.fullscreen-overlay');
+    
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+        if (!overlay.classList.contains('active')) return;
+        
+        if (e.key === 'Escape') {
+            overlay.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+    });
+    
+    // Close when clicking outside image
+    overlay.addEventListener('click', (e) => {
+        if (e.target === overlay) {
+            overlay.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+    });
+});
 
 // Script 4: Custom playbutton //
 
