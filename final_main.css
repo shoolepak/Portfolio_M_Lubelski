@@ -156,6 +156,18 @@ header {
 	padding: 0 0px;
 	float: left;
 }
+.container3_3 {
+	max-width: 1100px;
+	margin: 20px;
+	margin-top: 0px;
+	margin-right: auto;
+	padding: 0 0px;
+	float: left;
+}
+.container3_3 p, h1{
+	font-family: 'Times New Roman', Times, serif;
+	color: white;
+}
 .container4 {
 	max-width: 600px;
 	margin: 20px;
