@@ -444,11 +444,6 @@ h2 {
             margin: 0;
             font-family: Arial, sans-serif;
         }
-        @media (max-width: 768px) {
-            .video-grid {
-                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            }
-        }
 		.grid-container {
             columns: 5 250px;
             column-gap: 20px;
@@ -630,8 +625,16 @@ h2 {
 .nav-spacer {
             flex: 1;
             min-height: 35px;
-        }
-  }
+}
+		}
+@media (max-width: 768px) {
+.video-grid {
+	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+.container3 {
+	max-width: 450px;
+}
+		}
 .fade-in {
     opacity: 0;
     transition: opacity 0.8s ease-in-out;
