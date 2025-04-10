@@ -640,7 +640,7 @@ h2 {
 		}
 @media (max-width: 768px) {
 #myVideo {
-	left: -900px;
+	left: -1000px;
 	right: 0;
 	top: -400px;
 	bottom: 0;
