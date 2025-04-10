@@ -626,14 +626,101 @@ h2 {
             flex: 1;
             min-height: 35px;
 }
+.gallery {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: repeat(5, 1fr);
+	gap: 100px;
+	height: 70vh;
+	padding: 40px;
+	margin: 0;
+}
 		}
 @media (max-width: 768px) {
+#myVideo {
+	left: -900px;
+	right: 0;
+	top: -400px;
+	bottom: 0;
+}
 .video-grid {
 	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
 }
 .container3 {
-	max-width: 450px;
+	max-width: 380px;
 }
+.container3_3 {
+	max-width: 380px;
+}
+.container4 {
+	max-width: 380px;
+}
+.container4_4 {
+	max-width: 380px;
+}
+.container2 {
+	max-width: 380px;
+}
+.upbar h1{
+	color: white;
+	float: left;
+	padding: 5px 12px;
+	font-size: 20px;
+}
+.upbar #ML{
+	max-width: 90%;
+	min-width: 60%;
+	margin-left: 20px;
+	padding: 10px 5px;
+}
+#h1{
+	font-size: 28px;
+}
+#navbar2 {
+	width: 40px;
+}
+#navbar2 li {
+	padding: 6px 0;
+	border-bottom: 5px solid #555;
+}
+#navbar2 a {
+	font-size: 15px;
+	padding: 8px 0px;
+}
+#navbar2 a:hover {
+	background: #f1f1f1;
+	color: black;
+	padding: 2px 7px;
+	transition: background-color 0.3s;
+}  
+#navbar2 h1 {
+	margin-top: 20px;
+}
+#navbar2 .nav-button.active {
+	background-color: #f1f1f1;
+	color: black;
+	padding: 8px 8px;
+	transition: color 0.3s ease background-color 0.3s;;
+}
+.gallery {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(4, 1fr);
+	gap: 60px;
+	height: 45vh;
+	padding: 20px;
+	margin-left:15px;
+}
+@media (max-width: 600px) {
+    .mobile_container {
+	display: grid;
+    grid-template-columns: 1fr;
+    }
+  }
+#img7 {
+    grid-column: 2 / span 2;
+	grid-row: 7 / span 2;
+  }   
 		}
 .fade-in {
     opacity: 0;
