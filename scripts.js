@@ -13,7 +13,7 @@ function flashNavbarColor() {
 	window.addEventListener('scroll', function() {
             const navbar = document.getElementById('navbar2');
             // Show navbar when scrolled 200px or more
-            if (window.pageYOffset > 230) {
+            if (window.pageYOffset > 230 && window.innerWidth > 768) {
                 navbar.style.right = '0';
             } else {
                 navbar.style.right = '-300px';
